@@ -9,7 +9,7 @@
     <!-- Las siguientes lineas las saqué de mi investigación personal.
     Es cómo conectar las fuentes de google con el documento -->
 
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
@@ -27,34 +27,57 @@
     <div id="grilla">
         <header id="header">
             <span id="main_icon">
-                <img  src="./multimedia/favicon.png" alt="MO">
+                <img src="./multimedia/favicon.png" alt="MO">
             </span>
             <nav class="menu">
+                <input type="checkbox" class="menu_alternador">
+                <div class="hamburguesa"></div>
                 <ul class="menu__lista">
                     <li><a href="#">Inicio</a></li>
                     <li><a href="./paginas/noticias.html">Noticias</a></li>
                     <li><a href=" ./paginas/recursos.html">Recursos</a></li>
                     <li><a href="./paginas/lenguajes.html">Lenguajes</a></li>
                     <li><a href="#sobre-mi">Sobre Mí</a></li>
-                    <li><a href="./paginas/contacto.html" id="contacto">Contáctame</a></li>
                 </ul>
             </nav>
+            
+            <a href="./paginas/contacto.html" id="contacto">Contáctame</a>
         </header>
         <main>
             <div id="principal">
-                <div class="titulo_info"><h2>MAURICIO ORTIZ</h2></div>
+                <div class="titulo_info">
+                    <h2>MAURICIO ORTIZ</h2>
+                </div>
                 <h2 class="p__info" style="font-weight: 600;">Aprendiz de Desarrollo Full Stack en CoderHouse</h2>
                 <section>
                     <p class="p__info">
-                        ¡Hola! Soy Mauricio Ortiz, aprendiz en Desarrollo Web Full Stack en CoderHouse desde Mayo de 2022.
-                        <br/>
-                        Creo firmemente que uno de los objetivos más inherentes al ser humano es aprender algo nuevo siempre, a
+                        ¡Hola! Soy Mauricio Ortiz, aprendiz en Desarrollo Web Full Stack en CoderHouse desde Mayo de
+                        2022.
+                        <br />
+                        Creo firmemente que uno de los objetivos más inherentes al ser humano es aprender algo nuevo
+                        siempre, a
                         lo largo
-                        de toda la vida.<br/><br/>
+                        de toda la vida.<br /><br />
                         Te invito a que navegues por el sitio y veas las utilidades disponibles para ti. ¡Un abrazo!
                     </p>
                 </section>
-                <section>
+                <section class="tabla_contenido">
+                    <div class="contenido">
+                        <h3>Noticias</h3>
+                        <a href="./paginas/noticias.html"><img src="./multimedia/Noticias.png" alt="Las Noticias"></a>
+                    </div>
+                    <div class="contenido">
+                        <h3>Lenguajes</h3>
+                        <a href="./paginas/lenguajes.html"><img src="./multimedia/Lenguajes.png"
+                                alt="Los Lenguajes"></a>
+                    </div>
+                    <div class="contenido">
+                        <h3>Recursos</h3>
+                        <a href="./paginas/recursos.html"><img src="./multimedia/Recursos.png" alt="Los Recursos"></a>
+                    </div>
+                </section>
+                <!-- <section>
+
                     <table id="tabla_contenido">
                         <tr>
                             <th>Noticias</th>
@@ -63,46 +86,91 @@
                         </tr>
                         <tr>
                             <td><a href="./paginas/noticias.html"><img src="./multimedia/Noticias.png"
-                                        alt="Las Noticias"></a></td>
+                                        alt="Las Noticias"></a>
+                            </td>
                             <td><a href="./paginas/lenguajes.html"><img src="./multimedia/Lenguajes.png"
                                         alt="Los Lenguajes"></a></td>
                             <td><a href="./paginas/recursos.html"><img src="./multimedia/Recursos.png"
-                                        alt="Los Recursos"></a></td>
+                                        alt="Los Recursos"></a>
+                            </td>
                         </tr>
                     </table>
-                </section>
+                </section> -->
                 <hr>
                 <section id="sobre-mi">
                     <h2 class="titulo_info">SOBRE MÍ</h2>
-                        <p class="p__info clearfix"><img id="mi_foto" src="./multimedia/person.png" width="200px" alt="Mi foto de perfil">Aqui va toda mi información personal. La llenaré después porque no se si esta será mi idea definitiva.
-                            Aqui
-                            va toda mi información personal. La llenaré después porque no se si esta será mi idea definitiva. Aqui
-                            va
-                            toda mi información personal. La llenaré después porque no se si esta será mi idea definitiva. Aqui va
-                            toda
-                            mi información personal. La llenaré después porque no se si esta será mi idea definitiva. Aqui va toda
-                            mi
-                            información personal. La llenaré después porque no se si esta será mi idea definitiva. Aqui va toda mi
-                            información personal. La llenaré después porque no se si esta será mi idea definitiva. Aqui va toda mi
-                            información personal. La llenaré después porque no se si esta será mi idea definitiva.
-                        </p>
+                    <p class="p__info clearfix"><img id="mi_foto" src="./multimedia/person.png" width="200px"
+                            alt="Mi foto de perfil">Aqui va toda mi información personal. La llenaré después porque no
+                        se si esta será mi idea definitiva.
+                        Aqui
+                        va toda mi información personal. La llenaré después porque no se si esta será mi idea
+                        definitiva. Aqui
+                        va
+                        toda mi información personal. La llenaré después porque no se si esta será mi idea definitiva.
+                        Aqui va
+                        toda
+                        mi información personal. La llenaré después porque no se si esta será mi idea definitiva. Aqui
+                        va toda
+                        mi
+                        información personal. La llenaré después porque no se si esta será mi idea definitiva. Aqui va
+                        toda mi
+                        información personal. La llenaré después porque no se si esta será mi idea definitiva. Aqui va
+                        toda mi
+                        información personal.
+                    </p>
                 </section>
             </div>
+
         </main>
-        <aside><h2>Hola</h2></aside>
+        <aside id="publicidad">
+            <p>Espacio para publicidad.
+                Espacio para Publicidad.
+                Espacio para Publicidad.
+                Espacio para Publicidad.
+                Espacio para Publicidad.
+                Espacio para Publicidad.
+                Espacio para Publicidad.
+                Espacio para Publicidad.
+                Espacio para Publicidad.
+                Espacio para Publicidad.
+                Espacio para Publicidad.
+                Espacio para Publicidad.
+                Espacio para Publicidad.
+                Espacio para Publicidad.
+                Espacio para Publicidad.
+                Espacio para Publicidad.
+                Espacio para Publicidad.
+                Espacio para Publicidad.
+                Espacio para Publicidad.
+                Espacio para Publicidad.
+                Espacio para Publicidad.
+                Espacio para Publicidad.
+                Espacio para Publicidad.
+                Espacio para Publicidad.
+                Espacio para Publicidad.
+                Espacio para Publicidad.
+                Espacio para Publicidad.
+                Espacio para Publicidad.
+                Espacio para Publicidad.
+
+            </p>
+        </aside>
         <footer>
             <div class="footer__div">
                 <a href="#header">Volver arriba</a>
                 <p>Todos los derechos reservados - Córdoba, Colombia - 2022</p>
-        </div>
-            <h4>Sígueme</h4>
-            <ul>
-                <li><a href="#">Instagram </a></li>
-                <li><a href="#">Facebook </a></li>
-                <li><a href="#">GitHub</a></li>
-                <!-- No he puesto aún las referencias a las redes sociales porque no las tengo -->
-            </ul></footer>
-        </body>
-    </div>
+            </div>
+            <div>
+                <h4>Sígueme</h4>
+                <ul>
+                    <li><a href="#">Instagram </a></li>
+                    <li><a href="#">Facebook </a></li>
+                    <li><a href="#">GitHub</a></li>
+                    <!-- No he puesto aún las referencias a las redes sociales porque no las tengo -->
+                </ul>
+            </div>
+        </footer>
+</body>
+</div>
 
 </html>
