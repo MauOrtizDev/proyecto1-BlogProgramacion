@@ -1,0 +1,412 @@
+/* Reseteo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ahora configuro el body: fondo gris, color general de letra y tipo de letra */
+body {
+    background-color: #252525;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+}
+
+#grilla{
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "principal publicidad"
+    "footer footer";
+    grid-template-rows: 100px auto 100px;
+    grid-template-columns: 4fr 1fr;
+
+}
+
+/* El fondo del header es negro, establezco que sea flex para acomodar bien el logo y el menu */
+header {
+    grid-area: header;
+    background-color: #000;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#principal{
+    grid-area: principal;
+    border: 2px solid orange;
+}
+
+aside{
+    grid-area: publicidad;
+    border: 2px solid orange;
+
+}
+/* Con este margen del main, alejo el contenido principal del footer */
+main {
+    margin-bottom: 100px;
+}
+
+
+/* Estilo del footer: fondo negro y altura de 140px */
+footer {
+    grid-area: footer;
+    background-color: #000;
+    height: 140px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Estilo de la hr que separa el contenido inicial con el 'Sobre mí' */
+hr {
+    margin: 50px;
+    border: 1px solid #f99500;
+}
+
+/* Id del icono MO */
+#main_icon {
+    padding-top: 13px;
+    height: 82%;
+    position: absolute;
+    left: 0px;
+    margin-left: 5px;
+}
+
+/* Los próximos estilos son para el menu de navegación principal */
+.menu {
+
+    display: inline;
+    padding: 20px 20px 20px 20px;
+}
+
+.menu__lista li {
+    display: inline;
+    float: left;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.menu__lista ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.menu__lista li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu__lista li a:hover {
+    background-color: #111;
+}
+
+/* Un id especial para el li contacto de la lista de navegación. En este modifico todo para que parezca un botón */
+#contacto {
+    float: right;
+    right: 0px;
+    width: 170px;
+    background-color: #f99500;
+    border-radius: 30px;
+    color: #000;
+    font-weight: 600;
+    margin-right: 20px;
+    position: absolute;
+    right: 0px;
+}
+
+/* De aquí en adelante es estilos de los párrafos y encabezados */
+
+.titulo_info {
+    font-style: italic;
+    color: #f99500;
+    height: 50px;
+    text-align: center;
+    padding: 10px;
+    /* border: #f99500 solid; */
+
+}
+
+.p__info {
+    /* border: #f99500 solid; */
+    text-align: center;
+    margin: auto;
+    padding: 5px;
+    font-weight: 300;
+    line-height: 1.5;
+    width: 90%;
+}
+
+/* El estilo de la tabla y sus hijos */
+
+#tabla_contenido {
+    width: 90%;
+    margin: auto;
+    font-size: x-large;
+}
+
+#tabla_contenido th,
+td {
+
+    /* border: 2px #f99500 solid; */
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+
+}
+
+#tabla_contenido img {
+    width: 330px;
+    height: 215px;
+    object-fit: cover;
+    border-radius: 15px;
+    /* overflow: hidden; */
+
+}
+
+/* Para que la foto aparezca a la derecha del texto, lo puse dentro del p y le añadí el float */
+#mi_foto {
+    height: 150px;
+    width: 150px;
+    float: right;
+    margin: 0 20px 0 20px;
+    border-radius: 50%;
+}
+
+/* Esto del Clearfix lo saqué de un tutorial de w3schools para que no salga la imagen fuera del contenedor.
+Tengo que entender esta sintaxis, porque francamente no se lo que significa */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Estilos en el footer */
+.footer__div {
+    padding: 10px 10px 10px 10px;
+    float: left;
+    width: 85%;
+    height: 100%;
+    text-align: center;
+}
+
+.footer__div p {
+    padding: 35px;
+}
+
+footer h4 {
+    padding: 10px;
+    text-align: center;
+}
+
+footer li {
+    list-style-type: none;
+    text-align: center;
+    padding: 3px;
+
+}
+
+footer li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    color: gray;
+}
+
+/* Estilos sección Noticias */
+.noticia {
+    margin: auto;
+    width: 90%;
+    border-bottom: 2px solid orange;
+    text-align: center;
+    padding: 15px;
+}
+
+.noticia img {
+    float: left;
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    margin: 0 20px 20px 20px;
+    border-radius: 15px;
+}
+
+.noticia p {
+    line-height: 1.5;
+    text-align: left;
+    margin: 20px;
+}
+
+/* Estilos sección Recursos */
+
+.recurso {
+    margin: auto;
+    width: 90%;
+    border-bottom: 2px solid orange;
+    /* border: 2px solid orange; */
+
+    padding: 15px;
+}
+
+.recurso img {
+    float: left;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin: 0 20px 0 0;
+    border-radius: 15px;
+}
+
+.recurso p {
+    line-height: 1.5;
+    text-align: left;
+
+}
+
+/* Estilos sección Lenguajes */
+.lenguaje {
+    margin: auto;
+    width: 90%;
+    border-bottom: 2px solid orange;
+    text-align: center;
+    padding: 15px;
+}
+
+.lenguaje iframe {
+    float: left;
+    margin: 0 20px 20px 20px;
+    border-radius: 15px;
+}
+
+.lenguaje p {
+    line-height: 1.5;
+    text-align: left;
+    margin: 20px;
+}
+
+/* Estilos formulario */
+form {
+    width: 90%;
+    margin: auto;
+
+}
+fieldset{
+    border: none;
+}
+
+input[type=text],
+select {
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 10px;
+    width: 450px;
+}
+
+select {
+    width: 150px;
+}
+
+textarea {
+    height: 150px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    resize: none;
+    width: 450px;
+
+}
+
+/* input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+  */
+
+.label {
+    float: left;
+    width: 20%;
+    margin-top: 6px;
+
+    text-align: right;
+    padding: 20px 10px 0 0;
+}
+
+
+
+
+.input {
+    float: left;
+    width: 80%;
+    margin-top: 6px;
+
+}
+
+
+.form_contacto_1 {
+    width: 60%;
+    float: left;
+    border-right: 2px dashed #f99500;
+}
+
+.form_contacto_2 {
+    float: left;
+    width: 40%;
+    padding: 20px;
+}
+
+input[type=button],
+input[type=submit],
+input[type=reset] {
+    background-color: #f99500;
+    border-radius: 30px;
+    color: #000;
+    border: 1px solid #252525;
+    font-weight: 600;
+    padding: 10px;
+    margin: 15px;
+}
+
+#tabla_contacto{
+    margin: auto;
+}
+#tabla_contacto img{
+    width: 50px;
+    height: 50px;
+}
+
+#tabla_contacto th, #tabla_contacto td{
+padding: 10px;
+}

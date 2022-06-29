@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #grilla {
+            display: grid;
+            grid-template-areas:
+                "header header"
+                "principal publicidad"
+                "footer footer";
+            grid-template-rows: 100px auto 100px;
+            grid-template-columns: 3fr 1fr;
+        }
+        .borde{
+            border: 2px solid green;
+        }
+
+        header {
+            grid-area: header;
+        }
+
+        #principal {
+            grid-area: principal;
+        }
+
+        #publicidad {
+            grid-area: publicidad;
+        }
+
+        footer {
+            grid-area: footer;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="grilla">
+        <header class="borde">SOY EL HEADER</header>
+        <main>
+            <section id="principal" class="borde">SOY EL PRINCIPAL</section>
+            
+        </main>
+        <section id="publicidad" class="borde">PUBLICIDAD</section>
+        <footer class="borde">SOY EL FOOTER</footer>
+    </div>
+</body>
+
+</html>
