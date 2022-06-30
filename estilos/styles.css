@@ -402,10 +402,10 @@ footer li a {
     }
 
     #mi_foto {
-            float:none;
-            display: block;
-            margin: auto;
-            padding: 10px;
+        float: none;
+        display: block;
+        margin: auto;
+        padding: 10px;
     }
 }
 
