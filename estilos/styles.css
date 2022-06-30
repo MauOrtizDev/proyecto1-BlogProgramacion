@@ -487,6 +487,11 @@ input[type=reset] {
     padding: 10px;
 }
 
+
+/* Cuando llega a 760px, la grilla pasa de ser grid a ser flex, para que todo se 
+mueste en una columna. Cambia el orden de los elementos en el header, y el nav
+ cambia a un logo (hecho con el tutorial) */
+
 @media screen and (max-width: 760px) {
     #grilla {
         display: flex;
@@ -548,12 +553,12 @@ input[type=reset] {
 
 }
 
-@media screen and (max-width: 480px) {
-    #grilla {
-        display: flex;
-        flex-direction: column;
-    }
+/* Con la pantalla tipo mobile, el contenido también se muestra uno debajo del otro,
+y hay algunos cambios menores en las fotos, para que ocupen el ancho de la pantalla
+y se vean centradas. */
 
+@media screen and (max-width: 480px) {
+    
     .tabla_contenido {
         flex-direction: column;
     }
