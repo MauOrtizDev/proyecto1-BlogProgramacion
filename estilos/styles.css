@@ -10,6 +10,7 @@ body {
     background-color: #252525;
     color: #fff;
     font-family: 'Inter', sans-serif;
+    text-align: center;
 }
 
 #grilla {
@@ -20,6 +21,7 @@ body {
         "footer footer";
     grid-template-rows: 100px auto 140px;
     grid-template-columns: 5fr 1fr;
+    gap: 1em;
 
 }
 
@@ -27,37 +29,28 @@ body {
 header {
     grid-area: header;
     background-color: #000;
-    height: 100px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0 12px 0 12px;
+    padding: 0 0.75em;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    text-align: center;
 }
 
 #principal {
     grid-area: principal;
     border-right: 1px solid black;
-    margin: 20px 0 20px 0;
-
 }
 
 aside {
     grid-area: publicidad;
-    padding: 15px;
     color: #111;
     max-height: 940px;
     overflow: hidden;
+    padding-right: 1em;
 
 }
-
-/* Con este margen del main, alejo el contenido principal del footer */
-/* main {
-    margin-bottom: 100px;
-} */
 
 
 /* Estilo del footer: fondo negro y altura de 140px */
@@ -66,7 +59,6 @@ footer {
     display: flex;
     flex-flow: row nowrap;
     background-color: #000;
-    height: 140px;
     overflow: hidden;
 }
 
@@ -77,7 +69,7 @@ a {
 
 /* Estilo de la hr que separa el contenido inicial con el 'Sobre mí' */
 hr {
-    margin: 50px;
+    margin: 3em;
     border: 1px solid #f99500;
 }
 
@@ -91,10 +83,6 @@ hr {
 }
 
 /* Los próximos estilos son para el menu de navegación principal */
-.menu {
-
-    padding: 20px 20px 20px 20px;
-}
 
 .menu__lista li {
     display: inline;
@@ -102,15 +90,11 @@ hr {
 }
 
 .menu__lista ul {
-    margin: 0;
-    padding: 0;
     overflow: hidden;
 }
 
 .menu__lista li a {
-    color: white;
     padding: 1em 1.2vw;
-    text-decoration: none;
 }
 
 .menu__lista li a:hover {
@@ -119,14 +103,11 @@ hr {
 
 /* Un id especial para el li contacto de la lista de navegación. En este modifico todo para que parezca un botón */
 #contacto {
-
-    width: 170px;
+    width: 10em;
     background-color: #f99500;
-    border-radius: 30px;
-    padding: 10px;
+    border-radius: 1.875em;
+    padding: 0.625em;
     color: #000;
-    /* position: absolute; */
-    /* right: 20px; */
 }
 
 /* De aquí en adelante es estilos de los párrafos y encabezados */
@@ -134,83 +115,57 @@ hr {
 .titulo_info {
     font-style: italic;
     color: #f99500;
-    height: 50px;
-    text-align: center;
-    padding: 10px;
+    height: 3.125em;
+    padding: 0.625em;
 
 }
 
 .p__info {
-    text-align: center;
     margin: auto;
-    padding: 5px;
-    font-weight: 300;
+    padding: 0.3125em;
     line-height: 1.5;
-    width: 90%;
+    width: 95%;
 }
 
-/* El estilo de la tabla y sus hijos */
-
-#tabla_contenido {
-    width: 90%;
-    margin: auto;
-    font-size: x-large;
-}
+/* Contenidos index */
 
 .tabla_contenido {
     width: 95%;
     margin: auto;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    font-size: large;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-size: 1.2em;
 }
 
 .tabla_contenido h3 {
-    padding: 12px;
+    padding: 1.5vw;
 }
 
 .contenido {
-    width: 33.33%;
-    padding: 10px;
-    text-align: center;
+    width:33.33%;
+    padding: 1.2vw;
+    min-width: 200px;
 }
 
 .tabla_contenido img {
     object-fit: cover;
-    border-radius: 15px;
-
-    width: 90%;
+    border-radius: 0.4em;
+    width: 100%;
     aspect-ratio: 1.5;
-
 }
 
-/*
-#tabla_contenido th,
-td {
-
-    text-align: center;
-    padding: 10px 15px 10px 15px;
-
-} */
-
-/* #tabla_contenido img {
-    width: 10em;
-    height: 10em;
-    object-fit: cover;
-    border-radius: 15px;
-
-} */
 #sobre-mi {
     padding-bottom: 50px;
 }
 
 /* Para que la foto aparezca a la derecha del texto, lo puse dentro del p y le añadí el float */
 #mi_foto {
-    height: 150px;
-    width: 150px;
+    height: 9.375em;
+    width: 9.375em;
     float: right;
-    margin: 0 20px 0 20px;
+    margin: 0 2vw;
     border-radius: 50%;
 }
 
@@ -226,34 +181,21 @@ Tengo que entender esta sintaxis, porque francamente no se lo que significa */
 
 
 .footer__div {
-    /* padding: 10px 10px 10px 10px; */
     width: 85%;
     height: 100%;
-    text-align: center;
 }
 
 .footer__div p {
-    padding: 35px;
+    padding: 1.5em;
 }
 
 footer h4 {
     padding: 10px;
-    text-align: center;
 }
 
 footer li {
     list-style-type: none;
-    text-align: center;
-    padding: 3px;
-
-}
-
-footer li a {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    color: gray;
+    padding: 0.2em;
 }
 
 .hamburguesa {
@@ -558,7 +500,10 @@ y hay algunos cambios menores en las fotos, para que ocupen el ancho de la panta
 y se vean centradas. */
 
 @media screen and (max-width: 480px) {
-    
+
+    body{
+        font-size: 12.5px;
+    }
     .tabla_contenido {
         flex-direction: column;
     }
@@ -567,14 +512,16 @@ y se vean centradas. */
         width: 95%;
     }
 
-    #mi_foto, .noticia a {
+    #mi_foto,
+    .noticia a {
         float: none;
         display: block;
         margin: auto;
         padding: 10px;
-        }
-    .noticia a img{
-        width:90%;
+    }
+
+    .noticia a img {
+        width: 90%;
         aspect-ratio: 1.5;
         height: auto;
     }
