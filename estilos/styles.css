@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 /* Ahora configuro el body: fondo gris, color general de letra y tipo de letra */
@@ -28,7 +29,7 @@ body {
 /* El fondo del header es negro, establezco que sea flex para acomodar bien el logo y el menu */
 header {
     grid-area: header;
-    background-color: #000;
+    background-image:linear-gradient(#000, #000, #000,#252525);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -36,7 +37,7 @@ header {
     padding: 0 0.75em;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    ;
+    transition: all .5s ease;
 }
 
 #principal {
@@ -59,7 +60,7 @@ footer {
     grid-area: footer;
     display: flex;
     flex-flow: row nowrap;
-    background-color: #000;
+    background-image:linear-gradient(#252525, #000, #000, #000);
     overflow: hidden;
 }
 
@@ -82,6 +83,9 @@ hr {
 #main_icon img {
     height: 100%;
 }
+#main_icon img:hover{
+    animation: icono 1.3s ease-in-out infinite;
+}
 
 /* Los próximos estilos son para el menu de navegación principal */
 .menu__lista li {
@@ -93,6 +97,7 @@ hr {
 }
 
 .menu__lista li a {
+    transition: all .5s ease;
     padding: 1.5em 1.2vw;
 }
 
@@ -107,6 +112,25 @@ hr {
     border-radius: 1.875em;
     padding: 0.625em;
     color: #000;
+    transition: all .5s ease;
+}
+
+#contacto:hover {
+    background-color: #ffc46c;
+    animation: icono 1.5s ease-in-out infinite;
+}
+
+@keyframes icono {
+    50%{transform: scale(1.05,1.05);}
+    100%{transform: scale(1,1);}
+    
+}
+
+.contenido img:hover,
+.noticia img:hover,
+.recurso img:hover {
+    opacity: .75;
+    transition: .5s ease;
 }
 
 /* De aquí en adelante es estilos de los párrafos y encabezados */
@@ -180,13 +204,18 @@ Tengo que entender esta sintaxis, porque francamente no se lo que significa */
 
 
 .footer__div {
+    padding-top: 10px;
     width: 85%;
     height: 100%;
 }
 
+.footer__div a{
+    font-style: italic;
+}
 .footer__div p {
     padding: 1.5em;
 }
+
 
 footer h4 {
     padding: 10px;
@@ -232,9 +261,12 @@ footer li {
 }
 
 .menu_alternador {
+    position: absolute;
     width: 30px;
     height: 30px;
     z-index: 3;
+    top: 16px;
+    right: 8px;
     cursor: pointer;
     opacity: 0;
 }
@@ -435,7 +467,8 @@ input[type=reset] {
     margin: 1em;
 }
 
-input[type=radio], input[type=checkbox]{
+input[type=radio],
+input[type=checkbox] {
     margin: 0 0.3em;
 }
 
@@ -477,6 +510,10 @@ mueste en una columna. Cambia el orden de los elementos en el header, y el nav
         height: 82%;
     }
 
+    .hamburguesa,
+    .menu_alternador {
+        display: block
+    }
     .menu__lista {
         display: flex;
         justify-content: start;
@@ -488,25 +525,23 @@ mueste en una columna. Cambia el orden de los elementos en el header, y el nav
         border: 1px solid black;
         background-color: #252525;
         width: 140px;
+        transition: all .5s ease;
     }
-    
+
     .menu__lista li {
         width: 100%;
         padding: 0.625em;
         box-shadow: inset 0 1px 1px gold;
-        
+
     }
-    .menu__lista li a, .menu__lista li a:hover{
+
+    .menu__lista li a,
+    .menu__lista li a:hover {
         background: none;
     }
+
     .menu__lista li:hover {
         background: #000;
-}
-
-    .hamburguesa,
-    .menu_alternador {
-        display: block;
-        top: -14px;
     }
 
     #main_icon {
@@ -557,11 +592,13 @@ y se vean centradas. */
         margin: auto;
         padding: 1em;
     }
-    #mi_foto{
+
+    #mi_foto {
         width: 60vw;
         height: 60vw;
-        
+
     }
+
     .noticia a img {
         width: 90%;
         aspect-ratio: 1.5;
@@ -599,7 +636,7 @@ y se vean centradas. */
         width: 25%;
     }
 
-    .linea_botones_form{
+    .linea_botones_form {
         text-align: center;
     }
 }
