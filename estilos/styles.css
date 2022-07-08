@@ -29,7 +29,7 @@ body {
 /* El fondo del header es negro, establezco que sea flex para acomodar bien el logo y el menu */
 header {
     grid-area: header;
-    background-color: #000;
+    background-image:linear-gradient(#000, #000, #000,#252525);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -60,7 +60,7 @@ footer {
     grid-area: footer;
     display: flex;
     flex-flow: row nowrap;
-    background-color: #000;
+    background-image:linear-gradient(#252525, #000, #000, #000);
     overflow: hidden;
 }
 
@@ -82,6 +82,9 @@ hr {
 
 #main_icon img {
     height: 100%;
+}
+#main_icon img:hover{
+    animation: icono 1.3s ease-in-out infinite;
 }
 
 /* Los próximos estilos son para el menu de navegación principal */
@@ -114,6 +117,13 @@ hr {
 
 #contacto:hover {
     background-color: #ffc46c;
+    animation: icono 1.5s ease-in-out infinite;
+}
+
+@keyframes icono {
+    50%{transform: scale(1.05,1.05);}
+    100%{transform: scale(1,1);}
+    
 }
 
 .contenido img:hover,
@@ -194,13 +204,18 @@ Tengo que entender esta sintaxis, porque francamente no se lo que significa */
 
 
 .footer__div {
+    padding-top: 10px;
     width: 85%;
     height: 100%;
 }
 
+.footer__div a{
+    font-style: italic;
+}
 .footer__div p {
     padding: 1.5em;
 }
+
 
 footer h4 {
     padding: 10px;
@@ -246,9 +261,12 @@ footer li {
 }
 
 .menu_alternador {
+    position: absolute;
     width: 30px;
     height: 30px;
     z-index: 3;
+    top: 16px;
+    right: 8px;
     cursor: pointer;
     opacity: 0;
 }
@@ -492,6 +510,10 @@ mueste en una columna. Cambia el orden de los elementos en el header, y el nav
         height: 82%;
     }
 
+    .hamburguesa,
+    .menu_alternador {
+        display: block
+    }
     .menu__lista {
         display: flex;
         justify-content: start;
@@ -503,6 +525,7 @@ mueste en una columna. Cambia el orden de los elementos en el header, y el nav
         border: 1px solid black;
         background-color: #252525;
         width: 140px;
+        transition: all .5s ease;
     }
 
     .menu__lista li {
@@ -519,12 +542,6 @@ mueste en una columna. Cambia el orden de los elementos en el header, y el nav
 
     .menu__lista li:hover {
         background: #000;
-    }
-
-    .hamburguesa,
-    .menu_alternador {
-        display: block;
-        top: -14px;
     }
 
     #main_icon {
