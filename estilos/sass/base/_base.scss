@@ -1,0 +1,15 @@
+/*
+Estilos más básicos
+*/
+
+body {
+    background-color: $c-fondo;
+    color: $c-textoPpal;
+    font-family: $fuente-ppal;
+    text-align: center;
+}
+
+#principal {
+    grid-area: principal;
+    border-right: 1px solid $c-fondoSecund;
+}

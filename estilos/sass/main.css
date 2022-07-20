@@ -1,0 +1,50 @@
+@charset "UTF-8";
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Estilos más básicos
+*/
+body {
+  background-color: #252525;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+}
+
+#principal {
+  grid-area: principal;
+  border-right: 1px solid #000;
+}
+
+#grilla {
+  display: grid;
+  grid-template-areas: "header header" "principal publicidad" "footer footer";
+  grid-template-rows: 80px auto 140px;
+  grid-template-columns: 5fr 1fr;
+  gap: 1em;
+}
+
+header {
+  grid-area: header;
+  background-image: linear-gradient(#000, #000, #000, #252525);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.75em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  transition: all 0.5s ease;
+}
+
+aside {
+  grid-area: publicidad;
+  color: #000;
+  max-height: 940px;
+  overflow: hidden;
+  padding-right: 1em;
+}/*# sourceMappingURL=main.css.map */

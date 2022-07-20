@@ -1,0 +1,10 @@
+#grilla {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "principal publicidad"
+        "footer footer";
+    grid-template-rows: 80px auto 140px;
+    grid-template-columns: 5fr 1fr;
+    gap: 1em;
+}

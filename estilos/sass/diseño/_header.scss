@@ -1,0 +1,12 @@
+header {
+    grid-area: header;
+    background-image:linear-gradient($c-fondoSecund, $c-fondoSecund, $c-fondoSecund, $c-fondo);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.75em;
+    font-family: $fuente-secundaria;
+    font-weight: 600;
+    transition: all .5s ease;
+}
