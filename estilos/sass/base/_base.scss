@@ -11,7 +11,7 @@ body {
 
 #principal {
     grid-area: principal;
-    border-right: 1px solid $c-fondoResaltado;
+    border-right: 1px solid $c-fondoSecund;
 }
 
 a {
@@ -24,6 +24,7 @@ hr {
     border: 1px solid $c-textoResaltado;
 }
 
+// HASTA AQUI VOY
 
 
 .contenido img:hover,

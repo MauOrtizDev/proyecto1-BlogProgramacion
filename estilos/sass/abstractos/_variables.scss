@@ -1,9 +1,13 @@
 //COLORES
 $c-fondo: #252525;
 $c-fondoSecund: #000;
-$c-textoPpal: #fff;
-$c-textoResaltado: #f99500;
 $c-hovers:#111;
+$c-resaltado: #f99500;
+
+$c-textoPpal: #fff;
+$c-textoResaltado: $c-resaltado;
+$c-textoAlternativo:$c-fondoSecund;
+$c-textoMuerto: $c-hovers;
 
 //FUENTES
 $fuente-ppal: 'Inter', sans-serif;

@@ -30,71 +30,6 @@ hr {
   border: 1px solid #f99500;
 }
 
-/* Id del icono MO */
-#main_icon {
-  height: 64%;
-}
-
-#main_icon img {
-  height: 100%;
-}
-
-#main_icon img:hover {
-  -webkit-animation: icono 1.3s ease-in-out infinite;
-          animation: icono 1.3s ease-in-out infinite;
-}
-
-/* Los próximos estilos son para el menu de navegación principal */
-.menu__lista li {
-  display: inline;
-}
-
-.menu__lista ul {
-  overflow: hidden;
-}
-
-.menu__lista li a {
-  transition: all 0.5s ease;
-  padding: 1.5em 1.2vw;
-}
-
-.menu__lista li a:hover {
-  background-color: #111;
-}
-
-/* Un id especial para el li contacto de la lista de navegación. En este modifico todo para que parezca un botón */
-#contacto {
-  width: 10em;
-  background-color: #f99500;
-  border-radius: 1.875em;
-  padding: 0.625em;
-  color: #000;
-  transition: all 0.5s ease;
-}
-
-#contacto:hover {
-  background-color: #ffc46c;
-  -webkit-animation: icono 1.5s ease-in-out infinite;
-          animation: icono 1.5s ease-in-out infinite;
-}
-
-@-webkit-keyframes icono {
-  50% {
-    transform: scale(1.05, 1.05);
-  }
-  100% {
-    transform: scale(1, 1);
-  }
-}
-
-@keyframes icono {
-  50% {
-    transform: scale(1.05, 1.05);
-  }
-  100% {
-    transform: scale(1, 1);
-  }
-}
 .contenido img:hover,
 .noticia img:hover,
 .recurso img:hover {
@@ -472,11 +407,9 @@ header {
 #main_icon {
   height: 64%;
 }
-
 #main_icon img {
   height: 100%;
 }
-
 #main_icon img:hover {
   -webkit-animation: icono 1.3s ease-in-out infinite;
           animation: icono 1.3s ease-in-out infinite;
@@ -486,16 +419,13 @@ header {
 .menu__lista li {
   display: inline;
 }
-
-.menu__lista ul {
+.menu__lista li ul {
   overflow: hidden;
 }
-
 .menu__lista li a {
   transition: all 0.5s ease;
   padding: 1.5em 1.2vw;
 }
-
 .menu__lista li a:hover {
   background-color: #111;
 }
@@ -503,7 +433,7 @@ header {
 /* Un id especial para el li contacto de la lista de navegación. En este modifico todo para que parezca un botón */
 #contacto {
   width: 10em;
-  background-color: #f99500;
+  background-color: #000;
   border-radius: 1.875em;
   padding: 0.625em;
   color: #000;
@@ -514,6 +444,15 @@ header {
   background-color: #ffc46c;
   -webkit-animation: icono 1.5s ease-in-out infinite;
           animation: icono 1.5s ease-in-out infinite;
+}
+
+@-webkit-keyframes icono {
+  50% {
+    transform: scale(1.05, 1.05);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
 }
 
 @keyframes icono {
