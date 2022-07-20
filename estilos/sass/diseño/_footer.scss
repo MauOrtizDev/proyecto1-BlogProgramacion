@@ -1,0 +1,7 @@
+footer {
+    grid-area: footer;
+    display: flex;
+    flex-flow: row nowrap;
+    background-image:linear-gradient($c-fondo, $c-fondoSecund, $c-fondoSecund, $c-fondoSecund);
+    overflow: hidden;
+}

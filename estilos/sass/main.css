@@ -20,6 +20,433 @@ body {
   border-right: 1px solid #000;
 }
 
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+hr {
+  margin: 3em;
+  border: 1px solid #f99500;
+}
+
+/* Id del icono MO */
+#main_icon {
+  height: 64%;
+}
+
+#main_icon img {
+  height: 100%;
+}
+
+#main_icon img:hover {
+  -webkit-animation: icono 1.3s ease-in-out infinite;
+          animation: icono 1.3s ease-in-out infinite;
+}
+
+/* Los próximos estilos son para el menu de navegación principal */
+.menu__lista li {
+  display: inline;
+}
+
+.menu__lista ul {
+  overflow: hidden;
+}
+
+.menu__lista li a {
+  transition: all 0.5s ease;
+  padding: 1.5em 1.2vw;
+}
+
+.menu__lista li a:hover {
+  background-color: #111;
+}
+
+/* Un id especial para el li contacto de la lista de navegación. En este modifico todo para que parezca un botón */
+#contacto {
+  width: 10em;
+  background-color: #f99500;
+  border-radius: 1.875em;
+  padding: 0.625em;
+  color: #000;
+  transition: all 0.5s ease;
+}
+
+#contacto:hover {
+  background-color: #ffc46c;
+  -webkit-animation: icono 1.5s ease-in-out infinite;
+          animation: icono 1.5s ease-in-out infinite;
+}
+
+@-webkit-keyframes icono {
+  50% {
+    transform: scale(1.05, 1.05);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes icono {
+  50% {
+    transform: scale(1.05, 1.05);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+.contenido img:hover,
+.noticia img:hover,
+.recurso img:hover {
+  opacity: 0.75;
+  transition: 0.5s ease;
+}
+
+/* De aquí en adelante es estilos de los párrafos y encabezados */
+.titulo_info {
+  font-style: italic;
+  color: #f99500;
+  height: 3.125em;
+  padding: 0.625em;
+}
+
+.p__info {
+  margin: auto;
+  padding: 0.3125em;
+  line-height: 1.5;
+  width: 95%;
+}
+
+/* Contenidos index */
+.tabla_contenido {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  font-size: 1.2em;
+}
+
+.tabla_contenido h3 {
+  padding: 1.5vw;
+}
+
+.contenido {
+  width: 33.33%;
+  padding: 1.2vw;
+  min-width: 230px;
+}
+
+.tabla_contenido img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.4em;
+  width: 100%;
+  aspect-ratio: 1.5;
+}
+
+#sobre-mi {
+  padding-bottom: 50px;
+}
+
+/* Para que la foto aparezca a la derecha del texto, lo puse dentro del p y le añadí el float */
+#mi_foto {
+  height: 9.375em;
+  width: 9.375em;
+  float: right;
+  margin: 0 2vw;
+  border-radius: 50%;
+}
+
+/* Esto del Clearfix lo saqué de un tutorial de w3schools para que no salga la imagen fuera del contenedor.
+Tengo que entender esta sintaxis, porque francamente no se lo que significa */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Estilos en el footer */
+.footer__div {
+  padding-top: 10px;
+  width: 85%;
+  height: 100%;
+}
+
+.footer__div a {
+  font-style: italic;
+}
+
+.footer__div p {
+  padding: 1.5em;
+}
+
+footer h4 {
+  padding: 10px;
+}
+
+footer li {
+  list-style-type: none;
+  padding: 0.2em;
+}
+
+.hamburguesa {
+  position: relative;
+  width: 30px;
+  height: 4px;
+  background: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 2;
+  transition: 0.3s;
+}
+
+.hamburguesa:before,
+.hamburguesa:after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  right: 0;
+  background: #fff;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.hamburguesa:before {
+  top: -10px;
+  background: #fff;
+  width: 30px;
+}
+
+.hamburguesa:after {
+  top: 10px;
+  background: #fff;
+  width: 30px;
+}
+
+.menu_alternador {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  z-index: 3;
+  top: 16px;
+  right: 8px;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.hamburguesa,
+.menu_alternador {
+  display: none;
+}
+
+.menu input:checked ~ .hamburguesa {
+  background: transparent;
+}
+
+.menu input:checked ~ .hamburguesa:before {
+  top: 0;
+  transform: rotate(-45deg);
+  width: 20px;
+}
+
+.menu input:checked ~ .hamburguesa:after {
+  top: 0;
+  transform: rotate(45deg);
+  width: 20px;
+}
+
+.menu input:checked ~ .menu__lista {
+  right: 0;
+}
+
+/* Estilos sección Noticias */
+.noticia {
+  margin: auto;
+  width: 95%;
+  border-bottom: 1px solid orange;
+  padding: 1vw;
+}
+
+.noticia img {
+  float: left;
+  width: 18.75em;
+  height: 12.5em;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 0 1em 1em 1em;
+  border-radius: 1em;
+}
+
+.noticia p {
+  line-height: 1.5;
+  text-align: left;
+  margin: 1em;
+}
+
+/* Estilos sección Recursos */
+.recurso {
+  margin: auto;
+  width: 95%;
+  border-bottom: 1px solid orange;
+  padding: 1em;
+}
+
+.recurso img {
+  float: left;
+  width: 6.25em;
+  height: 6.25em;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 0 1.25em 0 0;
+  border-radius: 1em;
+}
+
+.recurso h3 {
+  margin-bottom: 0.625em;
+}
+
+.recurso p {
+  line-height: 1.5;
+  text-align: justify;
+}
+
+/* Estilos sección Lenguajes */
+.lenguaje {
+  margin: auto;
+  width: 95%;
+  border-bottom: 1px solid orange;
+  padding: 1em;
+}
+
+.lenguaje iframe {
+  float: left;
+  margin: 0 1em 1em 1em;
+  border-radius: 15px;
+  width: 45vw;
+  height: 26vw;
+  min-width: 400px;
+  min-height: 225px;
+}
+
+.lenguaje p {
+  line-height: 1.5;
+  text-align: justify;
+  margin: 1.25em;
+}
+
+/* Estilos formulario */
+form {
+  width: 95%;
+  margin: auto;
+}
+
+fieldset {
+  border: none;
+}
+
+.label {
+  display: inline;
+  float: left;
+  width: 20%;
+  margin-top: 0.375em;
+  text-align: right;
+  padding: 0.625em 0.2em 0 0;
+}
+
+.label_tel {
+  width: 19%;
+}
+
+.label_suscripcion {
+  width: 80%;
+}
+
+.input {
+  display: inline;
+  float: left;
+  width: 80%;
+  margin-top: 0.375em;
+}
+
+.input_suscripcion {
+  width: 20%;
+  padding: 0.625em 0.2em 0 0;
+}
+
+.input_gen {
+  width: 29%;
+}
+
+.input_tel {
+  width: 30.5%;
+}
+
+input[type=text],
+select,
+textarea {
+  padding: 0.75em 1.25em;
+  margin: 0.5em 0;
+  border: none;
+  border-radius: 0.625em;
+  width: 95%;
+}
+
+.form_linea:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+textarea {
+  height: 20vw;
+  resize: none;
+}
+
+.form_contacto_1 {
+  width: 60%;
+  float: left;
+  border-right: 1px dashed #f99500;
+}
+
+.form_contacto_2 {
+  float: left;
+  width: 40%;
+  padding: 1.25em;
+}
+
+input[type=button],
+input[type=submit],
+input[type=reset] {
+  background-color: #f99500;
+  border-radius: 1.875em;
+  color: #000;
+  border: 1px solid #252525;
+  font-weight: 600;
+  padding: 0.625em;
+  margin: 1em;
+}
+
+input[type=radio],
+input[type=checkbox] {
+  margin: 0 0.3em;
+}
+
+#tabla_contacto {
+  margin: auto;
+}
+
+#tabla_contacto img {
+  width: 3.125em;
+  height: 3.125em;
+}
+
+#tabla_contacto th,
+#tabla_contacto td {
+  padding: 0.625em;
+}
+
 #grilla {
   display: grid;
   grid-template-areas: "header header" "principal publicidad" "footer footer";
@@ -41,10 +468,198 @@ header {
   transition: all 0.5s ease;
 }
 
+/* Id del icono MO */
+#main_icon {
+  height: 64%;
+}
+
+#main_icon img {
+  height: 100%;
+}
+
+#main_icon img:hover {
+  -webkit-animation: icono 1.3s ease-in-out infinite;
+          animation: icono 1.3s ease-in-out infinite;
+}
+
+/* Los próximos estilos son para el menu de navegación principal */
+.menu__lista li {
+  display: inline;
+}
+
+.menu__lista ul {
+  overflow: hidden;
+}
+
+.menu__lista li a {
+  transition: all 0.5s ease;
+  padding: 1.5em 1.2vw;
+}
+
+.menu__lista li a:hover {
+  background-color: #111;
+}
+
+/* Un id especial para el li contacto de la lista de navegación. En este modifico todo para que parezca un botón */
+#contacto {
+  width: 10em;
+  background-color: #f99500;
+  border-radius: 1.875em;
+  padding: 0.625em;
+  color: #000;
+  transition: all 0.5s ease;
+}
+
+#contacto:hover {
+  background-color: #ffc46c;
+  -webkit-animation: icono 1.5s ease-in-out infinite;
+          animation: icono 1.5s ease-in-out infinite;
+}
+
+@keyframes icono {
+  50% {
+    transform: scale(1.05, 1.05);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
 aside {
   grid-area: publicidad;
-  color: #000;
+  color: #111;
   max-height: 940px;
   overflow: hidden;
   padding-right: 1em;
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  flex-flow: row nowrap;
+  background-image: linear-gradient(#252525, #000, #000, #000);
+  overflow: hidden;
+}
+
+/* Cuando llega a 760px, la grilla pasa de ser grid a ser flex, para que todo se 
+mueste en una columna. Cambia el orden de los elementos en el header, y el nav
+ cambia a un logo (hecho con el tutorial) */
+@media screen and (max-width: 760px) {
+  #grilla {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #principal {
+    border-right: none;
+  }
+  header {
+    height: 64px;
+  }
+  #main_icon {
+    height: 82%;
+  }
+  .hamburguesa,
+.menu_alternador {
+    display: block;
+  }
+  .menu__lista {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 64px;
+    right: -300px;
+    border: 1px solid black;
+    background-color: #252525;
+    width: 140px;
+    transition: all 0.5s ease;
+  }
+  .menu__lista li {
+    width: 100%;
+    padding: 0.625em;
+    box-shadow: inset 0 1px 1px gold;
+  }
+  .menu__lista li a,
+.menu__lista li a:hover {
+    background: none;
+  }
+  .menu__lista li:hover {
+    background: #000;
+  }
+  #main_icon {
+    order: 0;
+  }
+  #contacto {
+    order: 1;
+  }
+  .menu {
+    order: 2;
+  }
+  .form_contacto_1,
+.form_contacto_2 {
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #f99500;
+    margin: auto;
+  }
+}
+/* Con la pantalla tipo mobile, el contenido también se muestra uno debajo del otro,
+y hay algunos cambios menores en las fotos, para que ocupen el ancho de la pantalla
+y se vean centradas. */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 14.5px;
+  }
+  /* .tabla_contenido {
+      flex-direction: column;
+
+  } */
+  .contenido {
+    width: 95%;
+  }
+  #mi_foto,
+.noticia a {
+    float: none;
+    display: block;
+    margin: auto;
+    padding: 1em;
+  }
+  #mi_foto {
+    width: 60vw;
+    height: 60vw;
+  }
+  .noticia a img {
+    width: 90%;
+    aspect-ratio: 1.5;
+    height: auto;
+  }
+  .lenguaje {
+    margin: auto;
+    padding: 0;
+  }
+  .lenguaje iframe {
+    margin: auto;
+    display: block;
+    min-width: 95vw;
+    min-height: 56.25vw;
+  }
+  .input,
+.label {
+    display: block;
+    width: 105%;
+    text-align: left;
+  }
+  .label_suscripcion,
+.input_suscripcion {
+    display: inline;
+    width: 75%;
+  }
+  .input_suscripcion {
+    width: 25%;
+  }
+  .linea_botones_form {
+    text-align: center;
+  }
 }/*# sourceMappingURL=main.css.map */

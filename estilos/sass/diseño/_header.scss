@@ -1,6 +1,6 @@
 header {
     grid-area: header;
-    background-image:linear-gradient($c-fondoSecund, $c-fondoSecund, $c-fondoSecund, $c-fondo);
+    background-image: linear-gradient($c-fondoSecund, $c-fondoSecund, $c-fondoSecund, $c-fondo);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -9,4 +9,64 @@ header {
     font-family: $fuente-secundaria;
     font-weight: 600;
     transition: all .5s ease;
+}
+
+/* Id del icono MO */
+#main_icon {
+    height: 64%;
+
+    & img {
+        height: 100%;
+
+        &:hover {
+            animation: icono 1.3s ease-in-out infinite;
+        }
+    }
+}
+
+/* Los próximos estilos son para el menu de navegación principal */
+.menu__lista {
+    & li {
+        display: inline;
+
+        & ul {
+            overflow: hidden;
+        }
+
+        & a {
+            transition: all .5s ease;
+            padding: 1.5em 1.2vw;
+
+            &:hover {
+                background-color: $c-hovers;
+            }
+        }
+    }
+}
+
+
+/* Un id especial para el li contacto de la lista de navegación. En este modifico todo para que parezca un botón */
+#contacto {
+    width: 10em;
+    background-color: $c-textoSecund;
+    border-radius: 1.875em;
+    padding: 0.625em;
+    color: $c-fondoSecund;
+    transition: all .5s ease;
+}
+
+#contacto:hover {
+    background-color: #ffc46c;
+    animation: icono 1.5s ease-in-out infinite;
+}
+
+@keyframes icono {
+    50% {
+        transform: scale(1.05, 1.05);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+
 }
