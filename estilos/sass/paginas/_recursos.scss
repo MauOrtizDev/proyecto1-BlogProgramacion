@@ -1,0 +1,27 @@
+.recurso {
+    margin: auto;
+    width: $anchoMax;
+    border-bottom: 1px solid orange;
+    padding: 1em;
+
+    & img {
+        float: left;
+        width: 6.25em;
+        height: 6.25em;
+        object-fit: cover;
+        margin: 0 1.25em 0 0;
+        border-radius: 1em;
+        &:hover{
+            @include hoverArticulos;
+        }
+    }
+
+    & h3 {
+        margin-bottom: 0.625em;
+    }
+
+    & p {
+        line-height: 1.5;
+        text-align: justify;
+    }
+}

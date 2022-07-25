@@ -1,0 +1,79 @@
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+// MENU DESPLEGABLE
+.hamburguesa {
+    position: relative;
+    width: 30px;
+    height: 4px;
+    background: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 2;
+    transition: 0.3s;
+
+    &.hamburguesa:before,
+    &.hamburguesa:after {
+        content: "";
+        position: absolute;
+        height: 4px;
+        right: 0;
+        background: #fff;
+        border-radius: 10px;
+        transition: 0.3s;
+    }
+
+    &.hamburguesa:before {
+        top: -10px;
+        background: #fff;
+        width: 30px;
+    }
+
+    &.hamburguesa:after {
+        top: 10px;
+        background: #fff;
+        width: 30px;
+    }
+}
+
+.menu_alternador {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    z-index: 3;
+    top: 16px;
+    right: 8px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.hamburguesa,
+.menu_alternador {
+    display: none;
+}
+
+.menu {
+    & input:checked~.hamburguesa {
+        background: transparent;
+
+    }
+
+    & input:checked~.hamburguesa:before {
+        top: 0;
+        transform: rotate(-45deg);
+        width: 20px;
+    }
+
+    & input:checked~.hamburguesa:after {
+        top: 0;
+        transform: rotate(45deg);
+        width: 20px;
+    }
+
+    & input:checked~.menu__lista {
+        right: 0;
+    }
+}

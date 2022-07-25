@@ -1,4 +1,6 @@
 @import 'abstractos/variables';
+@import 'abstractos/utilidades';
+@import 'abstractos/mixins';
 
 @import 'base/reset';
 @import 'base/base';
@@ -8,3 +10,10 @@
 @import 'diseño/aside';
 @import 'diseño/footer';
 @import 'diseño/mediaQueries';
+
+@import 'componentes/formulario';
+
+@import 'paginas/index';
+@import 'paginas/lenguajes';
+@import 'paginas/noticias';
+@import 'paginas/recursos';

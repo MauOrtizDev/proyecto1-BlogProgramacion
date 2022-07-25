@@ -1,0 +1,24 @@
+.noticia {
+    margin: auto;
+    width: $anchoMax;
+    border-bottom: 1px solid orange;
+    padding: 1vw;
+
+    & img {
+        float: left;
+        width: 18.75em;
+        height: 12.5em;
+        object-fit: cover;
+        margin: 0 1em 1em 1em;
+        border-radius: 1em;
+        &:hover{
+            @include hoverArticulos;
+        }
+    }
+
+    & p {
+        line-height: 1.5;
+        text-align: left;
+        margin: 1em;
+    }
+}

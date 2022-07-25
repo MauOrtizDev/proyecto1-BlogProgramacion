@@ -539,6 +539,7 @@ mueste en una columna. Cambia el orden de los elementos en el header, y el nav
     .menu__lista li a:hover {
         background: none;
     }
+    
 
     .menu__lista li:hover {
         background: #000;

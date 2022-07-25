@@ -2,6 +2,30 @@ footer {
     grid-area: footer;
     display: flex;
     flex-flow: row nowrap;
-    background-image:linear-gradient($c-fondo, $c-fondoSecund, $c-fondoSecund, $c-fondoSecund);
+    background-image: linear-gradient($c-fondo, $c-fondoSecund, $c-fondoSecund, $c-fondoSecund);
     overflow: hidden;
+
+    & .footer__div {
+        padding-top: 10px;
+        width: 85%;
+        height: 100%;
+
+        & a {
+            font-style: italic;
+        }
+
+        & p {
+            padding: 1.5em;
+        }
+    }
+    & h4 {
+        padding: 10px;
+    }
+    
+    & li {
+        list-style-type: none;
+        padding: 0.2em;
+    }
 }
+
+

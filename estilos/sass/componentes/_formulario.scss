@@ -1,0 +1,115 @@
+form {
+    width: $anchoMax;
+    margin: auto;
+
+    & fieldset {
+        border: none;
+
+        & .form_contacto_1 {
+            width: 60%;
+            float: left;
+            border-right: 1px dashed #f99500;
+        }
+
+        & .form_contacto_2 {
+            float: left;
+            width: 40%;
+            padding: 1.25em;
+        }
+    }
+}
+
+
+.label {
+    display: inline;
+    float: left;
+    width: 20%;
+    margin-top: 0.375em;
+    text-align: right;
+    padding: 0.625em 0.2em 0 0;
+}
+
+.label_tel {
+    width: 19%;
+}
+
+.label_suscripcion {
+    width: 80%;
+}
+
+.input {
+    display: inline;
+    float: left;
+    width: 80%;
+    margin-top: 0.375em;
+
+}
+
+.input_suscripcion {
+    width: 20%;
+    padding: 0.625em 0.2em 0 0;
+}
+
+.input_gen {
+    width: 29%;
+}
+
+.input_tel {
+    width: 30.5%;
+}
+
+input[type=text],
+select,
+textarea {
+    padding: 0.75em 1.25em;
+    margin: 0.5em 0;
+    border: none;
+    border-radius: 0.625em;
+    width: 95%;
+}
+
+.form_linea:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+textarea {
+    height: 20vw;
+    resize: none;
+}
+
+
+
+
+
+input[type=button],
+input[type=submit],
+input[type=reset] {
+    background-color: #f99500;
+    border-radius: 1.875em;
+    color: #000;
+    border: 1px solid #252525;
+    font-weight: 600;
+    padding: 0.625em;
+    margin: 1em;
+}
+
+input[type=radio],
+input[type=checkbox] {
+    margin: 0 0.3em;
+}
+
+#tabla_contacto {
+    margin: auto;
+}
+
+#tabla_contacto img {
+    width: 3.125em;
+    height: 3.125em;
+}
+
+#tabla_contacto th,
+#tabla_contacto td {
+    padding: 0.625em;
+}

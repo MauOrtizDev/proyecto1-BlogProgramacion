@@ -1,0 +1,22 @@
+.lenguaje {
+    margin: auto;
+    width: $anchoMax;
+    border-bottom: 1px solid orange;
+    padding: 1em;
+
+    & iframe {
+        float: left;
+        margin: 0 1em 1em 1em;
+        border-radius: 15px;
+        width: 45vw;
+        height: 26vw;
+        min-width: 400px;
+        min-height: 225px;
+    }
+
+    & p {
+        line-height: 1.5;
+        text-align: justify;
+        margin: 1.25em;
+    }
+}

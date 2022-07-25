@@ -11,7 +11,6 @@ header {
     transition: all .5s ease;
 }
 
-/* Id del icono MO */
 #main_icon {
     height: 64%;
 
@@ -24,7 +23,6 @@ header {
     }
 }
 
-/* Los próximos estilos son para el menu de navegación principal */
 .menu__lista {
     & li {
         display: inline;
@@ -44,20 +42,18 @@ header {
     }
 }
 
-
-/* Un id especial para el li contacto de la lista de navegación. En este modifico todo para que parezca un botón */
 #contacto {
     width: 10em;
-    background-color: $c-textoAlternativo;
+    background-color: $c-resaltado;
     border-radius: 1.875em;
     padding: 0.625em;
-    color: $c-fondoSecund;
+    color: $c-textoAlternativo;
     transition: all .5s ease;
-}
 
-#contacto:hover {
-    background-color: #ffc46c;
-    animation: icono 1.5s ease-in-out infinite;
+    &:hover {
+        background-color: #ffc46c;
+        animation: icono 1.5s ease-in-out infinite;
+    }
 }
 
 @keyframes icono {
