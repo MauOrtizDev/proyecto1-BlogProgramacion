@@ -9,7 +9,7 @@
     position: relative;
     width: 30px;
     height: 4px;
-    background: #fff;
+    background: $c-textoPpal;
     border-radius: 10px;
     cursor: pointer;
     z-index: 2;
@@ -21,20 +21,20 @@
         position: absolute;
         height: 4px;
         right: 0;
-        background: #fff;
+        background: $c-textoPpal;
         border-radius: 10px;
         transition: 0.3s;
     }
 
     &.hamburguesa:before {
         top: -10px;
-        background: #fff;
+        background: $c-textoPpal;
         width: 30px;
     }
 
     &.hamburguesa:after {
         top: 10px;
-        background: #fff;
+        background: $c-textoPpal;
         width: 30px;
     }
 }

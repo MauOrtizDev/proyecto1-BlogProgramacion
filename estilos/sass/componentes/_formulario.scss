@@ -6,15 +6,15 @@ form {
         border: none;
 
         & .form_contacto_1 {
-            width: 60%;
+            width: $form1ancho;
             float: left;
             border-right: 1px dashed #f99500;
         }
 
         & .form_contacto_2 {
             float: left;
-            width: 40%;
-            padding: 1.25em;
+            width: 100%-$form1ancho;
+            padding: 1em;
         }
     }
 }
@@ -26,7 +26,7 @@ form {
     width: 20%;
     margin-top: 0.375em;
     text-align: right;
-    padding: 0.625em 0.2em 0 0;
+    padding: $padGral calc($padGral/3) 0 0;
 }
 
 .label_tel {
@@ -47,7 +47,7 @@ form {
 
 .input_suscripcion {
     width: 20%;
-    padding: 0.625em 0.2em 0 0;
+    padding: $padGral calc($padGral/3) 0 0;
 }
 
 .input_gen {
@@ -64,8 +64,8 @@ textarea {
     padding: 0.75em 1.25em;
     margin: 0.5em 0;
     border: none;
-    border-radius: 0.625em;
-    width: 95%;
+    border-radius: $padGral;
+    width: $anchoMax;
 }
 
 .form_linea:after {
@@ -86,12 +86,12 @@ textarea {
 input[type=button],
 input[type=submit],
 input[type=reset] {
-    background-color: #f99500;
+    background-color: $c-resaltado;
     border-radius: 1.875em;
     color: #000;
     border: 1px solid #252525;
     font-weight: 600;
-    padding: 0.625em;
+    padding: $padGral;
     margin: 1em;
 }
 
@@ -111,5 +111,5 @@ input[type=checkbox] {
 
 #tabla_contacto th,
 #tabla_contacto td {
-    padding: 0.625em;
+    padding: $padGral;
 }

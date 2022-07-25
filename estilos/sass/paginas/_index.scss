@@ -30,40 +30,14 @@
 
 }
 
-// POR AQUI VOY 
-
 #sobre-mi {
     padding-bottom: 50px;
+
+    #mi_foto {
+        height: 9.375em;
+        width: 9.375em;
+        float: right;
+        margin: 0 2vw;
+        border-radius: 50%;
+    }
 }
-
-/* Para que la foto aparezca a la derecha del texto, lo puse dentro del p y le añadí el float */
-#mi_foto {
-    height: 9.375em;
-    width: 9.375em;
-    float: right;
-    margin: 0 2vw;
-    border-radius: 50%;
-}
-
-// .tabla_contenido {
-
-
-//     
-//     }
-
-//     
-
-
-// }
-
-// #sobre-mi {
-//     padding-bottom: 50px;
-
-//     & #mi_foto {
-//         height: 9.375em;
-//         width: 9.375em;
-//         float: right;
-//         margin: 0 2vw;
-//         border-radius: 50%;
-//     }
-// }

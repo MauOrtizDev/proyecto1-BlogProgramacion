@@ -1,8 +1,5 @@
 .noticia {
-    margin: auto;
-    width: $anchoMax;
-    border-bottom: 1px solid orange;
-    padding: 1vw;
+    @include gralArticulos;
 
     & img {
         float: left;

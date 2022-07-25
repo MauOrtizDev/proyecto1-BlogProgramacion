@@ -1,8 +1,6 @@
 .recurso {
-    margin: auto;
-    width: $anchoMax;
-    border-bottom: 1px solid orange;
-    padding: 1em;
+    
+    @include gralArticulos;
 
     & img {
         float: left;

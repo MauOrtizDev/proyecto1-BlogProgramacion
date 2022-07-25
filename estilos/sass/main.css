@@ -74,9 +74,6 @@
   padding: 0;
 }
 
-/*
-Estilos más básicos
-*/
 body {
   background-color: #252525;
   color: #fff;
@@ -362,7 +359,7 @@ form fieldset .form_contacto_1 {
 form fieldset .form_contacto_2 {
   float: left;
   width: 40%;
-  padding: 1.25em;
+  padding: 1em;
 }
 
 .label {
@@ -371,7 +368,7 @@ form fieldset .form_contacto_2 {
   width: 20%;
   margin-top: 0.375em;
   text-align: right;
-  padding: 0.625em 0.2em 0 0;
+  padding: 0.625em 0.2083333333em 0 0;
 }
 
 .label_tel {
@@ -391,7 +388,7 @@ form fieldset .form_contacto_2 {
 
 .input_suscripcion {
   width: 20%;
-  padding: 0.625em 0.2em 0 0;
+  padding: 0.625em 0.2083333333em 0 0;
 }
 
 .input_gen {
@@ -486,9 +483,7 @@ input[type=checkbox] {
 #sobre-mi {
   padding-bottom: 50px;
 }
-
-/* Para que la foto aparezca a la derecha del texto, lo puse dentro del p y le añadí el float */
-#mi_foto {
+#sobre-mi #mi_foto {
   height: 9.375em;
   width: 9.375em;
   float: right;
@@ -499,8 +494,8 @@ input[type=checkbox] {
 .lenguaje {
   margin: auto;
   width: 95%;
-  border-bottom: 1px solid orange;
   padding: 1em;
+  border-bottom: 1px solid #f99500;
 }
 .lenguaje iframe {
   float: left;
@@ -520,8 +515,8 @@ input[type=checkbox] {
 .noticia {
   margin: auto;
   width: 95%;
-  border-bottom: 1px solid orange;
-  padding: 1vw;
+  padding: 1em;
+  border-bottom: 1px solid #f99500;
 }
 .noticia img {
   float: left;
@@ -545,8 +540,8 @@ input[type=checkbox] {
 .recurso {
   margin: auto;
   width: 95%;
-  border-bottom: 1px solid orange;
   padding: 1em;
+  border-bottom: 1px solid #f99500;
 }
 .recurso img {
   float: left;
