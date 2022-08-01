@@ -1,4 +1,7 @@
 // Estilos más básicos
+%heading {
+    padding: $padGral;
+}
 
 body {
     background-color: $c-fondo;
@@ -22,11 +25,20 @@ hr {
     border: 1px solid $c-textoResaltado;
 }
 
+h1{
+    @extend %heading;
+    font-size: 1.7em;
+}
+h2{
+    @extend %heading;
+    font-style: italic;
+    color: $c-textoResaltado;
+}
+
 .titulo_info {
     font-style: italic;
     color: $c-textoResaltado;
-    height: 3.125em;
-    padding: $padGral;
+    @extend %heading;
 
 }
 

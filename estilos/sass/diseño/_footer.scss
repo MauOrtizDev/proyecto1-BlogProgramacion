@@ -28,4 +28,9 @@ footer {
     }
 }
 
+@each $vinculo, $color in $coloresRedes {
+    .ahref--#{$vinculo}{
+        color: $color;
+    }
+} 
 

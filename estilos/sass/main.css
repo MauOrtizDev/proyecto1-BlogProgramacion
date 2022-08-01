@@ -74,6 +74,10 @@
   padding: 0;
 }
 
+.titulo_info, h2, h1 {
+  padding: 0.625em;
+}
+
 body {
   background-color: #252525;
   color: #fff;
@@ -96,11 +100,18 @@ hr {
   border: 1px solid #f99500;
 }
 
+h1 {
+  font-size: 1.7em;
+}
+
+h2 {
+  font-style: italic;
+  color: #f99500;
+}
+
 .titulo_info {
   font-style: italic;
   color: #f99500;
-  height: 3.125em;
-  padding: 0.625em;
 }
 
 .p__info {
@@ -219,6 +230,18 @@ footer h4 {
 footer li {
   list-style-type: none;
   padding: 0.2em;
+}
+
+.ahref--instagram {
+  color: #ffffff;
+}
+
+.ahref--facebook {
+  color: #dbdbdb;
+}
+
+.ahref--github {
+  color: #959595;
 }
 
 /* Cuando llega a 760px, la grilla pasa de ser grid a ser flex, para que todo se 
