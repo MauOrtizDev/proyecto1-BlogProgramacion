@@ -244,129 +244,6 @@ footer li {
   color: #959595;
 }
 
-/* Cuando llega a 760px, la grilla pasa de ser grid a ser flex, para que todo se 
-mueste en una columna. Cambia el orden de los elementos en el header, y el nav
- cambia a un logo (hecho con el tutorial) */
-@media screen and (max-width: 760px) {
-  #grilla {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  #principal {
-    border-right: none;
-  }
-  header {
-    height: 64px;
-  }
-  #main_icon {
-    height: 82%;
-  }
-  .hamburguesa,
-.menu_alternador {
-    display: block;
-  }
-  .menu__lista {
-    display: flex;
-    justify-content: start;
-    flex-direction: column;
-    align-items: center;
-    position: fixed;
-    top: 64px;
-    right: -300px;
-    border: 1px solid black;
-    background-color: #252525;
-    width: 140px;
-    transition: all 0.5s ease;
-  }
-  .menu__lista li {
-    width: 100%;
-    padding: 0.625em;
-    box-shadow: inset 0 1px 1px gold;
-  }
-  .menu__lista li a,
-.menu__lista li a:hover {
-    background: none;
-  }
-  .menu__lista li:hover {
-    background: #000;
-  }
-  #main_icon {
-    order: 0;
-  }
-  #contacto {
-    order: 1;
-  }
-  .menu {
-    order: 2;
-  }
-  .form_contacto_1,
-.form_contacto_2 {
-    display: block;
-    width: 100%;
-    border: none;
-    border-bottom: 1px solid #f99500;
-    margin: auto;
-  }
-}
-/* Con la pantalla tipo mobile, el contenido también se muestra uno debajo del otro,
-y hay algunos cambios menores en las fotos, para que ocupen el ancho de la pantalla
-y se vean centradas. */
-@media screen and (max-width: 480px) {
-  body {
-    font-size: 14.5px;
-  }
-  /* .tabla_contenido {
-      flex-direction: column;
-
-  } */
-  .contenido {
-    width: 95%;
-  }
-  #mi_foto,
-.noticia a {
-    float: none;
-    display: block;
-    margin: auto;
-    padding: 1em;
-  }
-  #mi_foto {
-    width: 60vw;
-    height: 60vw;
-  }
-  .noticia a img {
-    width: 90%;
-    aspect-ratio: 1.5;
-    height: auto;
-  }
-  .lenguaje {
-    margin: auto;
-    padding: 0;
-  }
-  .lenguaje iframe {
-    margin: auto;
-    display: block;
-    min-width: 95vw;
-    min-height: 56.25vw;
-  }
-  .input,
-.label {
-    display: block;
-    width: 105%;
-    text-align: left;
-  }
-  .label_suscripcion,
-.input_suscripcion {
-    display: inline;
-    width: 75%;
-  }
-  .input_suscripcion {
-    width: 25%;
-  }
-  .linea_botones_form {
-    text-align: center;
-  }
-}
 form {
   width: 95%;
   margin: auto;
@@ -374,12 +251,14 @@ form {
 form fieldset {
   border: none;
 }
-form fieldset .form_contacto_1 {
+
+.form_contacto_1 {
   width: 60%;
   float: left;
   border-right: 1px dashed #f99500;
 }
-form fieldset .form_contacto_2 {
+
+.form_contacto_2 {
   float: left;
   width: 40%;
   padding: 1em;
@@ -474,6 +353,129 @@ input[type=checkbox] {
   padding: 0.625em;
 }
 
+/* Cuando llega a 760px, la grilla pasa de ser grid a ser flex, para que todo se 
+mueste en una columna. Cambia el orden de los elementos en el header, y el nav
+ cambia a un logo (hecho con el tutorial) */
+@media screen and (max-width: 760px) {
+  #grilla {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #principal {
+    border-right: none;
+  }
+  header {
+    height: 64px;
+  }
+  #main_icon {
+    height: 82%;
+  }
+  .hamburguesa,
+.menu_alternador {
+    display: block;
+  }
+  .menu__lista {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 64px;
+    right: -300px;
+    border: 1px solid black;
+    background-color: #252525;
+    width: 140px;
+    transition: all 0.5s ease;
+  }
+  .menu__lista li {
+    width: 100%;
+    padding: 0.625em;
+    box-shadow: inset 0 1px 1px gold;
+  }
+  .menu__lista li a,
+.menu__lista li a:hover {
+    background: none;
+  }
+  .menu__lista li:hover {
+    background: #000;
+  }
+  #main_icon {
+    order: 0;
+  }
+  #contacto {
+    order: 1;
+  }
+  .menu {
+    order: 2;
+  }
+  .form_contacto_1, .form_contacto_2 {
+    border: none;
+    border-bottom: 1px solid #f99500;
+    margin: auto;
+    display: block !important;
+    clear: both;
+    width: 100%;
+  }
+}
+/* Con la pantalla tipo mobile, el contenido también se muestra uno debajo del otro,
+y hay algunos cambios menores en las fotos, para que ocupen el ancho de la pantalla
+y se vean centradas. */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 14.5px;
+  }
+  /* .tabla_contenido {
+      flex-direction: column;
+
+  } */
+  .contenido {
+    width: 95%;
+  }
+  #mi_foto,
+.noticia a {
+    float: none;
+    display: block;
+    margin: auto;
+    padding: 1em;
+  }
+  #mi_foto {
+    width: 60vw;
+    height: 60vw;
+  }
+  .noticia a img {
+    width: 90%;
+    aspect-ratio: 1.5;
+    height: auto;
+  }
+  .lenguaje {
+    margin: auto;
+    padding: 0;
+  }
+  .lenguaje iframe {
+    margin: auto;
+    display: block;
+    min-width: 95vw;
+    min-height: 56.25vw;
+  }
+  .input,
+.label {
+    display: block;
+    width: 105%;
+    text-align: left;
+  }
+  .label_suscripcion,
+.input_suscripcion {
+    display: inline;
+    width: 75%;
+  }
+  .input_suscripcion {
+    width: 25%;
+  }
+  .linea_botones_form {
+    text-align: center;
+  }
+}
 .tabla_contenido {
   width: 95%;
   margin: auto;

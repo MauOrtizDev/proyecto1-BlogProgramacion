@@ -68,15 +68,18 @@ mueste en una columna. Cambia el orden de los elementos en el header, y el nav
         order: 2;
     }
 
-    .form_contacto_1,
-    .form_contacto_2 {
-        display: block;
-        width: 100%;
-        border: none;
-        border-bottom: 1px solid #f99500;
-        margin: auto;
-    }
-}
+
+    .form_contacto_1, .form_contacto_2 {
+                border: none;
+                border-bottom: 1px solid #f99500;
+                margin: auto;
+                display: block !important;
+                clear: both;    
+                width: 100%;
+            }
+        }
+
+
 
 /* Con la pantalla tipo mobile, el contenido también se muestra uno debajo del otro,
 y hay algunos cambios menores en las fotos, para que ocupen el ancho de la pantalla

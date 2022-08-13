@@ -5,21 +5,21 @@ form {
     & fieldset {
         border: none;
 
-        & .form_contacto_1 {
-            width: $form1ancho;
-            float: left;
-            border-right: 1px dashed #f99500;
-        }
-
-        & .form_contacto_2 {
-            float: left;
-            width: 100%-$form1ancho;
-            padding: 1em;
-        }
+        
     }
 }
 
+.form_contacto_1 {
+    width: $form1ancho;
+    float: left;
+    border-right: 1px dashed #f99500;
+}
 
+.form_contacto_2 {
+    float: left;
+    width: 100%-$form1ancho;
+    padding: 1em;
+}
 .label {
     display: inline;
     float: left;
